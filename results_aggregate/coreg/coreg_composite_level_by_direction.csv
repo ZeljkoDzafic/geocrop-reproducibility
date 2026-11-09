@@ -1,0 +1,11 @@
+direction,composites,windows_pooled,shift_dy_px,shift_dx_px,r_at_zero,r_at_peak,note
+ASC,raw,P1-P4,-1.24,-0.95,0.374,0.385,engine acceptance.coregistration on orbit composites
+ASC,raw,P2-P4,-1.25,-0.88,0.424,0.436,
+ASC,raw,P3,-1.11,-1.00,0.308,0.318,
+DESC,raw,P1-P4,-0.11,-1.81,0.410,0.427,
+DESC,raw,P2-P4,-0.15,-2.01,0.486,0.512,
+DESC,raw,P3,-0.07,-2.01,0.452,0.475,
+ASC,corrected,P1-P4,-0.05,0.09,0.385,0.385,includes the windows P1-P2 used for the estimate
+ASC,corrected,P3-P4,-0.09,0.32,0.429,0.429,independent of the estimate
+DESC,corrected,P1-P4,-0.12,-0.38,0.424,0.424,includes the windows P1-P2 used for the estimate
+DESC,corrected,P3-P4,-0.20,-0.78,0.520,0.524,independent of the estimate

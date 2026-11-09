@@ -41,6 +41,25 @@ pip install -r requirements-crop-presence.txt
 scripts/run_crop_presence_demo.sh out
 ```
 
+## Sentinel-1 co-registration (sensitivity analysis, aggregated results)
+
+`results_aggregate/coreg/` holds the aggregated results of the check of the Sentinel-1 / Sentinel-2 alignment (no geometries, no polygon identifiers):
+`coreg_offsets_by_geometry.csv` (estimate on windows P1-P2, independent verification on P3-P4, per acquisition geometry),
+`coreg_composite_level_by_direction.csv` (residuals of the composites, pooled and independent windows),
+`coreg_before_after_E0_E8.csv` (main five-fold 5 km partition), `coreg_paired_by_partition.csv` and `coreg_paired_summary.csv`
+(E3, E4, E8 over 12 spatial partitions), `coreg_map_class_areas.csv` and `coreg_map_agreement.json` (E8 maps from uncorrected and corrected data).
+
+**Which results belong to which experiment.** The numbers of the paper and of `clean_reexecution_E0_E8.csv` are the *original,
+uncorrected* experiment (raw Sentinel-1 scenes). Everything in `coreg/` that says *corrected* is a *later sensitivity analysis* with
+Sentinel-1 scenes shifted by the estimated per-geometry offsets (uncorrected: `study_clean.yaml`, corrected: `study_s1coreg.yaml`; they differ only in
+the Sentinel-1 scene, composite and feature paths). Both were run from the clean engine commit `1f4509036bbf51ad7dd8019e72526760add65992` (Python 3.12,
+scikit-learn 1.9.1). Offsets are *estimated relative shifts between the sensors* (correlation of VH backscatter with NDVI, r about 0.4-0.55, 2-6 scenes per
+estimate), not absolute geolocation errors; sign convention: reference[y, x] ~ Sentinel-1[y + dy, x + dx], positive dy south, positive dx east, pixel 10 m;
+the correction shifts linear power by (-dy, -dx) with bilinear interpolation and skips offsets below 0.5 px. The restricted run directories and the
+scripts that produced the tables are not part of the public package; the commands in the paper's supplement and the engine's co-registration function
+(`geocrop.s1_stac.estimate_offsets`, `geocrop.acceptance.coregistration`) reproduce the procedure on your own data. The automatic correction is an option
+with quality control and should not be applied unconditionally to a new data set.
+
 ## What this package does not do
 Without the restricted reference data the package does **not** let you re-obtain the accuracy reported in the paper; it
 reproduces the workflow on synthetic data and documents the study (configuration, AOI, scene inventory, provenance,

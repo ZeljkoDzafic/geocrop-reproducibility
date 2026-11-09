@@ -1,0 +1,5 @@
+{
+ "valid_pixels": 3575801,
+ "pixel_agreement_raw_vs_corrected": 0.9724884018993227,
+ "pixel_agreement_clean_raw_vs_original_main_map": 1.0
+}

@@ -16,6 +16,7 @@ predictions, out-of-fold tables, geometries). They are personal or administrativ
   data, with STAC links), so that the image side can be re-created from public sources.
 - `configs/study_2023_resolved.yaml`, `aoi/`, `HASHES.md`: the resolved configuration of the 2023 run, the AOIs (boundaries only)
   and their hashes; reference-data paths in the configuration are placeholders.
+- `results_aggregate/coreg/`: aggregated results of the Sentinel-1 / Sentinel-2 co-registration check (offsets by acquisition geometry, before and after the correction, paired results by spatial partition, class areas and map agreement). The numbers of the paper are the original uncorrected experiment; the corrected run is a later sensitivity analysis (see README).
 - `results_aggregate/declared/`: aggregated results of the comparison with the declared-parcel layer (counts, shares, size
   classes of the components of a dissolved layer); the layer itself is not distributed.
 
