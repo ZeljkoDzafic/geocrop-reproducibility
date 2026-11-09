@@ -12,8 +12,10 @@ predictions, out-of-fold tables, geometries). They are personal or administrativ
   spread, summary of all variants). No polygon identifiers, no geometries.
 - `scenes/scenes_2023_imported.csv`: the Sentinel-2 and Sentinel-1 scenes imported for the study (public Copernicus
   data, with STAC links), so that the image side can be re-created from public sources.
-- `configs/study_2023.example.yaml`: the study configuration (windows, features, parameters) with reference-data paths
-  replaced by placeholders.
+- `configs/study_2023_resolved.yaml`, `aoi/`, `HASHES.md`: the resolved configuration of the 2023 run, the AOIs (boundaries only)
+  and their hashes; reference-data paths in the configuration are placeholders.
+- `results_aggregate/declared/`: aggregated results of the comparison with the declared-parcel layer (counts, shares, size
+  classes of the components of a dissolved layer); the layer itself is not distributed.
 
 **Access to the restricted data:** possible for qualified researchers on request to the corresponding author, subject to
 the agreement of the data owners.

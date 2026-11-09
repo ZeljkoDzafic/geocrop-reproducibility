@@ -18,7 +18,17 @@ Project website: https://geocropengine.rs.ba/ · Engine: https://github.com/Zelj
 | `scripts/compare_pheno.py` | one table for the A/B/C experiment from `geocrop cv-stability` outputs |
 | `results_aggregate/` | aggregated study results (overall metrics, partition spread, all-variants summary) |
 | `scenes/scenes_2023_imported.csv` | 82 Sentinel-2 and 44 Sentinel-1 scenes imported for the study (public data) |
-| `configs/study_2023.example.yaml` | study configuration with placeholder reference paths |
+| `configs/study_2023_resolved.yaml` | resolved configuration of the 2023 pixel-level run (from its run manifest; reference paths replaced by placeholders) |
+| `aoi/` | experiment AOI (357.6 km²) and operational lowland AOI (719.4 km²) as GeoJSON, with hashes in `HASHES.md` |
+| `scripts/declared_overlay.py` | aggregate overlay of a declared-parcel layer with a classification map (the comparison of Section 6.4 of the paper) |
+| `results_aggregate/declared/` | aggregated outputs of that comparison (no geometries) |
+| `results_aggregate/run_provenance_study.csv` | engine commit, working-tree flag, timestamp, config fingerprint and training-set hash of each run |
+
+## What this package does not do
+Without the restricted reference data the package does **not** let you re-obtain the accuracy reported in the paper; it
+reproduces the workflow on synthetic data and documents the study (configuration, AOI, scene inventory, provenance,
+aggregated results). The runs of the study were made with several engine commits (all contained in v1.0.0rc2); the run
+manifests record that the working tree was not clean when they ran, see `results_aggregate/run_provenance_study.csv`.
 
 ## Run the demo
 ```
