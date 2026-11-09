@@ -16,6 +16,9 @@ nothing about real accuracy.**
 | Truth | a declaration is *correct* when the declared crop is truly present on the parcel (any area > 0); `heterogeneous` = the crop covers < 50 % of the parcel |
 | Randomness | `numpy.random.default_rng(seed)`; seed 11 for the main table, seeds 1-20 for the spread; one simulation per seed |
 
+## Software versions
+Base experiments: engine commit c612404 and later commits, all contained in v1.0.0rc2; clean re-execution of E0-E8: commit 1f4509036b (on the main branch after v1.0.0rc2); crop-presence demonstration: engine commit 5f73f60fe6a413710b2339fb55b888328dd631d2 (pinned in `requirements-crop-presence.txt`). This package: the commit shown on GitHub for the version you cite.
+
 ## Run
 ```
 scripts/run_crop_presence_demo.sh out                  # seed 11; prints and writes out/crop_presence_synthetic_scores.csv

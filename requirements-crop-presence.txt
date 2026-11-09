@@ -1,3 +1,4 @@
-# `crop-presence` is not in v1.0.0rc2; use the engine's main branch until the next release, then pin the release tag here
-geocrop-engine @ git+https://github.com/ZeljkoDzafic/geocrop-engine.git@main
+# crop-presence is not in v1.0.0rc2. It is included from engine commit 5f73f60 (merge of PR #12 on the main branch, after v1.0.0rc2);
+# the synthetic crop-presence demonstration was run with exactly this commit. Replace by the release tag when the next release exists.
+geocrop-engine @ git+https://github.com/ZeljkoDzafic/geocrop-engine.git@5f73f60fe6a413710b2339fb55b888328dd631d2
 tabulate>=0.9
