@@ -1,0 +1,368 @@
+# Resolved configuration of the MAIN 2023 run (E0-E8, five-fold spatial CV); run manifest fingerprint 76861bae98b4dd14, engine commit c612404cb07c85aea4b3e03e388228f61393204b (working tree not clean at the time).
+# Reference-data paths are placeholders (not distributed). Re-executed from the clean commit 1f4509036b with identical results: results_aggregate/clean_reexecution_E0_E8.csv
+project: lijevce-polje-2023
+seed: 42
+grid:
+  crs: EPSG:32633
+  resolution_m: 10
+  reference: reference/grid_10m.tif
+  aoi_mask: null
+  aoi: null
+  aoi_halo_px: 0
+cache:
+  hash: content
+windows:
+  P1:
+    start: '2023-04-01'
+    end: '2023-05-31'
+  P2:
+    start: '2023-06-01'
+    end: '2023-07-15'
+  P3:
+    start: '2023-07-16'
+    end: '2023-08-31'
+  P4:
+    start: '2023-09-01'
+    end: '2023-09-30'
+paths:
+  s2_scenes: interim/s2
+  s1_scenes: interim/s1
+  composites: processed/composites_2023
+  features: features/stack_2023.tif
+  training: reference/training_not_distributed
+  parcels: reference/parcels_not_distributed
+  observations: reference/observations_not_distributed
+  output: out
+compositing:
+  statistic: median
+  scl_invalid:
+  - 0
+  - 1
+  - 3
+  - 8
+  - 9
+  - 10
+  - 11
+  cloud_probability_max: null
+  mask_dilation_px: 2
+  min_valid_observations: 1
+  temporal_screening: true
+s1:
+  separate_orbits: true
+  statistic: mean
+features:
+  s2_bands:
+  - B02
+  - B03
+  - B04
+  - B05
+  - B06
+  - B07
+  - B08
+  - B8A
+  - B11
+  - B12
+  s2_indices:
+  - NDVI
+  - EVI
+  - MSAVI2
+  - NDRE
+  - RECI
+  - GCVI
+  - NDMI
+  - BSI
+  s1:
+  - VV_dB
+  - VH_dB
+  - VHVV_dB
+  deltas:
+  - NDVI
+  - NDRE
+  - NDMI
+  - VH_dB
+  - VHVV_dB
+  seasonal:
+  - NDVI
+  - NDRE
+  embeddings: null
+timeseries:
+  enabled: true
+  start: '2023-04-01'
+  end: '2023-09-30'
+  s2_indices:
+  - NDVI
+  - NDRE
+  - NDMI
+  s1_indices:
+  - VHVV_dB
+  step_days: 5
+  output_step_days: 15
+  lambda: 50.0
+  envelope_iterations: 2
+  harmonic_order: 2
+  min_observed_fraction: 0
+  max_gap_days: null
+  temporal_support: false
+cbm:
+  enabled: true
+  index: NDVI
+  calendar: configs/crop_calendar.example.yaml
+  min_coverage: 0.5
+  events:
+    index: NDVI
+    step_days: 5
+    lambda: 5.0
+    min_coverage: 0.5
+    min_s2_observations: 8
+    max_s2_gap_days: 45
+    min_s1_acquisitions: 6
+    s1_group_by: orbit_direction
+    s1_window_days: 24
+    s1_min_obs: 2
+    s1_step_db: 1.5
+    s1_min_z: 3.0
+    s1_match_days: 18
+    harvest_drop: 0.2
+    abrupt_drop: 0.2
+    abrupt_window_days: 20
+    harvest_s1_sign: negative
+    bare_soil_ndvi: 0.25
+    min_bare_days: 15
+    tillage_step_db: 1.5
+    mowing_drop: 0.15
+    mowing_window_days: 30
+    mowing_lambda: 2.0
+    recovery_fraction: 0.5
+    recovery_days: 40
+    min_event_observations: 2
+    heterogeneity_std: 0.1
+    bimodality_threshold: 0.5555555555555556
+    heterogeneity_min_dates: 2
+    heterogeneity_min_fraction: 0.25
+    min_pixels_homogeneity: 10
+  rules:
+    enabled: false
+    min_marker_confidence: 0.5
+    harvest_expected_classes: []
+    no_harvest_outcome: yellow
+    mowing_expected_classes: []
+    min_mowing_events: 1
+    no_mowing_outcome: yellow
+    tillage_forbidden_classes: []
+    tillage_outcome: yellow
+    heterogeneity_outcome: yellow
+    mixed_class_share: null
+    mixed_class_outcome: yellow
+    insufficient_data_outcome: ignore
+  event_markers: false
+  temporal_support:
+    enabled: false
+    index: NDVI
+    step_days: 5
+    lambda: 20.0
+    min_coverage: 0.5
+    output_step_days: 15
+    tolerance_days: 10
+    min_clear_observations: 6
+    max_gap_days: 60
+    max_gap_at_peak_days: 30
+    max_interpolated_phenology: 0
+    max_interpolated_feature_fraction: null
+    outcome: yellow
+    missing_support_outcome: ignore
+    demote_red: false
+classes:
+  label_field: class_name
+  id_field: polygon_id
+  targets:
+  - soybean
+  - sunflower
+model:
+  algorithm: rf
+  n_estimators: 500
+  max_features: sqrt
+  min_samples_leaf: 1
+  class_weight: balanced_subsample
+  max_samples_per_polygon: 250
+  cv_folds: 5
+  spatial_block_m: 5000
+  spatial_buffer_m: 0
+  n_jobs: -1
+  max_depth: null
+  learning_rate: null
+  tune_grid:
+    max_features:
+    - sqrt
+    - 0.2
+    - 0.35
+    min_samples_leaf:
+    - 1
+    - 3
+  calibrate: true
+  calibration_mode: oof
+  calibration_fraction: 0.2
+  holdout_fraction: 0.0
+  inner_splits: 3
+  feature_groups:
+  - s2_band
+  - s2_index
+  - s1
+  - delta
+  - seasonal
+  - ts
+  - harmonic
+  allow_missing_classes: false
+  params: {}
+cv:
+  strategy: spatial_blocks
+  region_field: null
+  year_field: null
+  year: null
+predict:
+  smoothing:
+    enabled: false
+    window: 7
+    smoothness: 10.0
+uncertainty:
+  shift_detection: true
+  shift_policy: warn
+  shift_conformal: none
+  shift_sample_pixels: 5000
+  shift_test_weight_quantile: 0.9
+  region: null
+  year: null
+  shift_thresholds: {}
+parcel_classify:
+  enabled: false
+  decision: additional
+  label_field: null
+  indices: null
+  stats:
+  - mean
+  - std
+  groups:
+  - ts
+  - stats
+  - windows
+  - shape
+  step_days: 5
+  output_step_days: 15
+  window_days: 30
+  lambda: 20.0
+  bootstrap: 200
+  params: {}
+experiments:
+  E0_S2_bands:
+    groups:
+    - s2_band
+  E1_S2_bands_indices:
+    groups:
+    - s2_band
+    - s2_index
+  E2_S2_temporal:
+    groups:
+    - s2_band
+    - s2_index
+    - delta
+    - seasonal
+    sensors:
+    - S2
+  E3_S1_only:
+    groups:
+    - s1
+  E4_S1_S2_fusion:
+    groups:
+    - s2_band
+    - s2_index
+    - s1
+    - delta
+    - seasonal
+  E5_fusion_P1_P2:
+    groups:
+    - s2_band
+    - s2_index
+    - s1
+    - delta
+    periods:
+    - P1
+    - P2
+  E6_fusion_P1_P3:
+    groups:
+    - s2_band
+    - s2_index
+    - s1
+    - delta
+    periods:
+    - P1
+    - P2
+    - P3
+  E7_timeseries:
+    groups:
+    - ts
+    - phenology
+    - harmonic
+  E8_windows_plus_timeseries:
+    groups:
+    - s2_band
+    - s2_index
+    - s1
+    - delta
+    - seasonal
+    - ts
+    - phenology
+    - harmonic
+parcels:
+  id_field: parcel_id
+  declared_field: declared_crop
+  strategy: combined
+  interior_buffer_px: 1
+  min_valid_pixels: 4
+  min_confidence: null
+  min_majority_share: null
+  min_margin: null
+  crop_mapping: configs/crop_mapping.example.csv
+  conformal_alpha: 0.1
+  min_aoa_fraction: 0.5
+validation:
+  label_field: class_name
+  group_field: null
+  date_field: observed_at
+  year: 2023
+  training_exclusion_m: 50
+  window_px: 1
+  bootstrap: 1000
+openeo:
+  url: https://openeo.dataspace.copernicus.eu
+  products:
+  - s2_composites
+  s2_collection: SENTINEL2_L2A
+  s1_collection: SENTINEL1_GRD
+  s1_coefficient: sigma0-ellipsoid
+  s1_card4l: false
+  max_cloud_cover: null
+  signature_indices:
+  - NDVI
+  - BSI
+  start: null
+  end: null
+  job_options: null
+  work_dir: data/openeo
+data:
+  source: local
+  endpoint: https://earth-search.aws.element84.com/v1
+  collection: sentinel-2-l2a
+  max_cloud: 80
+  min_clear_fraction: 0.2
+resources:
+  disk_guard: true
+  min_free_gb: 5.0
+  safety_factor: 1.25
+  compression_ratio: 0.8
+  import_workers: 4
+  workers: null
+preflight:
+  min_s2_scenes_per_window: 3
+  min_s1_scenes_per_window: 2
+  max_unobserved_fraction: 0.05
+  coverage_max_px: 512
+  inventories: []

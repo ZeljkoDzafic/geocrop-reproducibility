@@ -47,6 +47,8 @@ reproduces the workflow on synthetic data and documents the study (configuration
 aggregated results). The runs of the study were made with several engine commits (all contained in v1.0.0rc2); the run
 manifests record that the working tree was not clean when they ran, see `results_aggregate/run_provenance_study.csv`.
 
+Protocol, parameters, absolute counts and the spread over 20 seeds of the synthetic crop-presence experiment: [PROTOCOL_crop_presence_synthetic.md](PROTOCOL_crop_presence_synthetic.md). The clean re-execution of the main experiments (identical results from commit `1f4509036b`) is in `results_aggregate/clean_reexecution_E0_E8.csv`; the configuration of the main run is `configs/study_2023_main_run_resolved.yaml`.
+
 ## Run the demo
 ```
 python -m venv .venv && . .venv/bin/activate

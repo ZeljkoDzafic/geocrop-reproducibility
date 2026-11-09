@@ -1,0 +1,161 @@
+method,subset,parcels,correct_declarations,supported_of_correct,recall_of_correct,wrong_declarations,supported_of_wrong,wrongly_supported,seed
+P1_pixel_majority_whole,all,80,52,33,0.6346153846153846,28,0,0.0,1
+P1_pixel_majority_whole,heterogeneous (crop < 50 % of parcel),50,22,3,0.13636363636363635,28,0,0.0,1
+P1_pixel_majority_agricultural,all,80,52,52,1.0,28,3,0.10714285714285714,1
+P1_pixel_majority_agricultural,heterogeneous (crop < 50 % of parcel),50,22,22,1.0,28,3,0.10714285714285714,1
+P2_soft_vote_agricultural>=0.5,all,80,52,51,0.9807692307692307,28,0,0.0,1
+P2_soft_vote_agricultural>=0.5,heterogeneous (crop < 50 % of parcel),50,22,21,0.9545454545454546,28,0,0.0,1
+P3_evidence_status_supported,all,80,52,49,0.9423076923076923,28,0,0.0,1
+P3_evidence_status_supported,heterogeneous (crop < 50 % of parcel),50,22,22,1.0,28,0,0.0,1
+P1_pixel_majority_whole,all,80,58,38,0.6551724137931034,22,0,0.0,2
+P1_pixel_majority_whole,heterogeneous (crop < 50 % of parcel),45,23,3,0.13043478260869565,22,0,0.0,2
+P1_pixel_majority_agricultural,all,80,58,58,1.0,22,4,0.18181818181818182,2
+P1_pixel_majority_agricultural,heterogeneous (crop < 50 % of parcel),45,23,23,1.0,22,4,0.18181818181818182,2
+P2_soft_vote_agricultural>=0.5,all,80,58,56,0.9655172413793104,22,0,0.0,2
+P2_soft_vote_agricultural>=0.5,heterogeneous (crop < 50 % of parcel),45,23,21,0.9130434782608695,22,0,0.0,2
+P3_evidence_status_supported,all,80,58,56,0.9655172413793104,22,0,0.0,2
+P3_evidence_status_supported,heterogeneous (crop < 50 % of parcel),45,23,23,1.0,22,0,0.0,2
+P1_pixel_majority_whole,all,80,56,39,0.6964285714285714,24,0,0.0,3
+P1_pixel_majority_whole,heterogeneous (crop < 50 % of parcel),46,22,5,0.22727272727272727,24,0,0.0,3
+P1_pixel_majority_agricultural,all,80,56,56,1.0,24,0,0.0,3
+P1_pixel_majority_agricultural,heterogeneous (crop < 50 % of parcel),46,22,22,1.0,24,0,0.0,3
+P2_soft_vote_agricultural>=0.5,all,80,56,54,0.9642857142857143,24,0,0.0,3
+P2_soft_vote_agricultural>=0.5,heterogeneous (crop < 50 % of parcel),46,22,20,0.9090909090909091,24,0,0.0,3
+P3_evidence_status_supported,all,80,56,54,0.9642857142857143,24,0,0.0,3
+P3_evidence_status_supported,heterogeneous (crop < 50 % of parcel),46,22,21,0.9545454545454546,24,0,0.0,3
+P1_pixel_majority_whole,all,80,56,40,0.7142857142857143,24,0,0.0,4
+P1_pixel_majority_whole,heterogeneous (crop < 50 % of parcel),42,18,2,0.1111111111111111,24,0,0.0,4
+P1_pixel_majority_agricultural,all,80,56,56,1.0,24,1,0.041666666666666664,4
+P1_pixel_majority_agricultural,heterogeneous (crop < 50 % of parcel),42,18,18,1.0,24,1,0.041666666666666664,4
+P2_soft_vote_agricultural>=0.5,all,80,56,52,0.9285714285714286,24,0,0.0,4
+P2_soft_vote_agricultural>=0.5,heterogeneous (crop < 50 % of parcel),42,18,14,0.7777777777777778,24,0,0.0,4
+P3_evidence_status_supported,all,80,56,50,0.8928571428571429,24,0,0.0,4
+P3_evidence_status_supported,heterogeneous (crop < 50 % of parcel),42,18,18,1.0,24,0,0.0,4
+P1_pixel_majority_whole,all,80,57,37,0.6491228070175439,23,0,0.0,5
+P1_pixel_majority_whole,heterogeneous (crop < 50 % of parcel),51,28,8,0.2857142857142857,23,0,0.0,5
+P1_pixel_majority_agricultural,all,80,57,57,1.0,23,0,0.0,5
+P1_pixel_majority_agricultural,heterogeneous (crop < 50 % of parcel),51,28,28,1.0,23,0,0.0,5
+P2_soft_vote_agricultural>=0.5,all,80,57,52,0.9122807017543859,23,0,0.0,5
+P2_soft_vote_agricultural>=0.5,heterogeneous (crop < 50 % of parcel),51,28,23,0.8214285714285714,23,0,0.0,5
+P3_evidence_status_supported,all,80,57,53,0.9298245614035088,23,0,0.0,5
+P3_evidence_status_supported,heterogeneous (crop < 50 % of parcel),51,28,28,1.0,23,0,0.0,5
+P1_pixel_majority_whole,all,80,58,37,0.6379310344827587,22,0,0.0,6
+P1_pixel_majority_whole,heterogeneous (crop < 50 % of parcel),45,23,2,0.08695652173913043,22,0,0.0,6
+P1_pixel_majority_agricultural,all,80,58,58,1.0,22,2,0.09090909090909091,6
+P1_pixel_majority_agricultural,heterogeneous (crop < 50 % of parcel),45,23,23,1.0,22,2,0.09090909090909091,6
+P2_soft_vote_agricultural>=0.5,all,80,58,53,0.9137931034482759,22,0,0.0,6
+P2_soft_vote_agricultural>=0.5,heterogeneous (crop < 50 % of parcel),45,23,18,0.782608695652174,22,0,0.0,6
+P3_evidence_status_supported,all,80,58,51,0.8793103448275862,22,0,0.0,6
+P3_evidence_status_supported,heterogeneous (crop < 50 % of parcel),45,23,21,0.9130434782608695,22,0,0.0,6
+P1_pixel_majority_whole,all,80,60,38,0.6333333333333333,20,0,0.0,7
+P1_pixel_majority_whole,heterogeneous (crop < 50 % of parcel),48,28,6,0.21428571428571427,20,0,0.0,7
+P1_pixel_majority_agricultural,all,80,60,60,1.0,20,3,0.15,7
+P1_pixel_majority_agricultural,heterogeneous (crop < 50 % of parcel),48,28,28,1.0,20,3,0.15,7
+P2_soft_vote_agricultural>=0.5,all,80,60,57,0.95,20,0,0.0,7
+P2_soft_vote_agricultural>=0.5,heterogeneous (crop < 50 % of parcel),48,28,25,0.8928571428571429,20,0,0.0,7
+P3_evidence_status_supported,all,80,60,56,0.9333333333333333,20,0,0.0,7
+P3_evidence_status_supported,heterogeneous (crop < 50 % of parcel),48,28,27,0.9642857142857143,20,0,0.0,7
+P1_pixel_majority_whole,all,80,58,41,0.7068965517241379,22,0,0.0,8
+P1_pixel_majority_whole,heterogeneous (crop < 50 % of parcel),44,22,5,0.22727272727272727,22,0,0.0,8
+P1_pixel_majority_agricultural,all,80,58,58,1.0,22,2,0.09090909090909091,8
+P1_pixel_majority_agricultural,heterogeneous (crop < 50 % of parcel),44,22,22,1.0,22,2,0.09090909090909091,8
+P2_soft_vote_agricultural>=0.5,all,80,58,54,0.9310344827586207,22,0,0.0,8
+P2_soft_vote_agricultural>=0.5,heterogeneous (crop < 50 % of parcel),44,22,18,0.8181818181818182,22,0,0.0,8
+P3_evidence_status_supported,all,80,58,51,0.8793103448275862,22,0,0.0,8
+P3_evidence_status_supported,heterogeneous (crop < 50 % of parcel),44,22,22,1.0,22,0,0.0,8
+P1_pixel_majority_whole,all,80,59,36,0.6101694915254238,21,0,0.0,9
+P1_pixel_majority_whole,heterogeneous (crop < 50 % of parcel),51,30,7,0.23333333333333334,21,0,0.0,9
+P1_pixel_majority_agricultural,all,80,59,59,1.0,21,2,0.09523809523809523,9
+P1_pixel_majority_agricultural,heterogeneous (crop < 50 % of parcel),51,30,30,1.0,21,2,0.09523809523809523,9
+P2_soft_vote_agricultural>=0.5,all,80,59,58,0.9830508474576272,21,0,0.0,9
+P2_soft_vote_agricultural>=0.5,heterogeneous (crop < 50 % of parcel),51,30,29,0.9666666666666667,21,0,0.0,9
+P3_evidence_status_supported,all,80,59,56,0.9491525423728814,21,0,0.0,9
+P3_evidence_status_supported,heterogeneous (crop < 50 % of parcel),51,30,29,0.9666666666666667,21,0,0.0,9
+P1_pixel_majority_whole,all,80,61,37,0.6065573770491803,19,0,0.0,10
+P1_pixel_majority_whole,heterogeneous (crop < 50 % of parcel),47,28,4,0.14285714285714285,19,0,0.0,10
+P1_pixel_majority_agricultural,all,80,61,61,1.0,19,2,0.10526315789473684,10
+P1_pixel_majority_agricultural,heterogeneous (crop < 50 % of parcel),47,28,28,1.0,19,2,0.10526315789473684,10
+P2_soft_vote_agricultural>=0.5,all,80,61,60,0.9836065573770492,19,0,0.0,10
+P2_soft_vote_agricultural>=0.5,heterogeneous (crop < 50 % of parcel),47,28,27,0.9642857142857143,19,0,0.0,10
+P3_evidence_status_supported,all,80,61,59,0.9672131147540983,19,0,0.0,10
+P3_evidence_status_supported,heterogeneous (crop < 50 % of parcel),47,28,28,1.0,19,0,0.0,10
+P1_pixel_majority_whole,all,80,61,33,0.5409836065573771,19,0,0.0,11
+P1_pixel_majority_whole,heterogeneous (crop < 50 % of parcel),50,31,3,0.0967741935483871,19,0,0.0,11
+P1_pixel_majority_agricultural,all,80,61,61,1.0,19,3,0.15789473684210525,11
+P1_pixel_majority_agricultural,heterogeneous (crop < 50 % of parcel),50,31,31,1.0,19,3,0.15789473684210525,11
+P2_soft_vote_agricultural>=0.5,all,80,61,56,0.9180327868852459,19,0,0.0,11
+P2_soft_vote_agricultural>=0.5,heterogeneous (crop < 50 % of parcel),50,31,26,0.8387096774193549,19,0,0.0,11
+P3_evidence_status_supported,all,80,61,56,0.9180327868852459,19,0,0.0,11
+P3_evidence_status_supported,heterogeneous (crop < 50 % of parcel),50,31,30,0.967741935483871,19,0,0.0,11
+P1_pixel_majority_whole,all,80,51,28,0.5490196078431373,29,0,0.0,12
+P1_pixel_majority_whole,heterogeneous (crop < 50 % of parcel),56,27,5,0.18518518518518517,29,0,0.0,12
+P1_pixel_majority_agricultural,all,80,51,51,1.0,29,2,0.06896551724137931,12
+P1_pixel_majority_agricultural,heterogeneous (crop < 50 % of parcel),56,27,27,1.0,29,2,0.06896551724137931,12
+P2_soft_vote_agricultural>=0.5,all,80,51,47,0.9215686274509803,29,0,0.0,12
+P2_soft_vote_agricultural>=0.5,heterogeneous (crop < 50 % of parcel),56,27,23,0.8518518518518519,29,0,0.0,12
+P3_evidence_status_supported,all,80,51,46,0.9019607843137255,29,0,0.0,12
+P3_evidence_status_supported,heterogeneous (crop < 50 % of parcel),56,27,24,0.8888888888888888,29,0,0.0,12
+P1_pixel_majority_whole,all,80,56,32,0.5714285714285714,24,0,0.0,13
+P1_pixel_majority_whole,heterogeneous (crop < 50 % of parcel),52,28,4,0.14285714285714285,24,0,0.0,13
+P1_pixel_majority_agricultural,all,80,56,56,1.0,24,3,0.125,13
+P1_pixel_majority_agricultural,heterogeneous (crop < 50 % of parcel),52,28,28,1.0,24,3,0.125,13
+P2_soft_vote_agricultural>=0.5,all,80,56,53,0.9464285714285714,24,0,0.0,13
+P2_soft_vote_agricultural>=0.5,heterogeneous (crop < 50 % of parcel),52,28,25,0.8928571428571429,24,0,0.0,13
+P3_evidence_status_supported,all,80,56,51,0.9107142857142857,24,0,0.0,13
+P3_evidence_status_supported,heterogeneous (crop < 50 % of parcel),52,28,27,0.9642857142857143,24,0,0.0,13
+P1_pixel_majority_whole,all,80,62,47,0.7580645161290323,18,0,0.0,14
+P1_pixel_majority_whole,heterogeneous (crop < 50 % of parcel),39,21,6,0.2857142857142857,18,0,0.0,14
+P1_pixel_majority_agricultural,all,80,62,62,1.0,18,3,0.16666666666666666,14
+P1_pixel_majority_agricultural,heterogeneous (crop < 50 % of parcel),39,21,21,1.0,18,3,0.16666666666666666,14
+P2_soft_vote_agricultural>=0.5,all,80,62,60,0.967741935483871,18,0,0.0,14
+P2_soft_vote_agricultural>=0.5,heterogeneous (crop < 50 % of parcel),39,21,19,0.9047619047619048,18,0,0.0,14
+P3_evidence_status_supported,all,80,62,60,0.967741935483871,18,0,0.0,14
+P3_evidence_status_supported,heterogeneous (crop < 50 % of parcel),39,21,20,0.9523809523809523,18,0,0.0,14
+P1_pixel_majority_whole,all,80,64,45,0.703125,16,0,0.0,15
+P1_pixel_majority_whole,heterogeneous (crop < 50 % of parcel),42,26,7,0.2692307692307692,16,0,0.0,15
+P1_pixel_majority_agricultural,all,80,64,64,1.0,16,2,0.125,15
+P1_pixel_majority_agricultural,heterogeneous (crop < 50 % of parcel),42,26,26,1.0,16,2,0.125,15
+P2_soft_vote_agricultural>=0.5,all,80,64,62,0.96875,16,0,0.0,15
+P2_soft_vote_agricultural>=0.5,heterogeneous (crop < 50 % of parcel),42,26,24,0.9230769230769231,16,0,0.0,15
+P3_evidence_status_supported,all,80,64,62,0.96875,16,0,0.0,15
+P3_evidence_status_supported,heterogeneous (crop < 50 % of parcel),42,26,24,0.9230769230769231,16,0,0.0,15
+P1_pixel_majority_whole,all,80,61,39,0.639344262295082,19,0,0.0,16
+P1_pixel_majority_whole,heterogeneous (crop < 50 % of parcel),44,25,3,0.12,19,0,0.0,16
+P1_pixel_majority_agricultural,all,80,61,61,1.0,19,2,0.10526315789473684,16
+P1_pixel_majority_agricultural,heterogeneous (crop < 50 % of parcel),44,25,25,1.0,19,2,0.10526315789473684,16
+P2_soft_vote_agricultural>=0.5,all,80,61,60,0.9836065573770492,19,0,0.0,16
+P2_soft_vote_agricultural>=0.5,heterogeneous (crop < 50 % of parcel),44,25,24,0.96,19,0,0.0,16
+P3_evidence_status_supported,all,80,61,59,0.9672131147540983,19,0,0.0,16
+P3_evidence_status_supported,heterogeneous (crop < 50 % of parcel),44,25,25,1.0,19,0,0.0,16
+P1_pixel_majority_whole,all,80,58,35,0.603448275862069,22,0,0.0,17
+P1_pixel_majority_whole,heterogeneous (crop < 50 % of parcel),50,28,5,0.17857142857142858,22,0,0.0,17
+P1_pixel_majority_agricultural,all,80,58,58,1.0,22,5,0.22727272727272727,17
+P1_pixel_majority_agricultural,heterogeneous (crop < 50 % of parcel),50,28,28,1.0,22,5,0.22727272727272727,17
+P2_soft_vote_agricultural>=0.5,all,80,58,55,0.9482758620689655,22,0,0.0,17
+P2_soft_vote_agricultural>=0.5,heterogeneous (crop < 50 % of parcel),50,28,25,0.8928571428571429,22,0,0.0,17
+P3_evidence_status_supported,all,80,58,54,0.9310344827586207,22,0,0.0,17
+P3_evidence_status_supported,heterogeneous (crop < 50 % of parcel),50,28,28,1.0,22,0,0.0,17
+P1_pixel_majority_whole,all,80,58,45,0.7758620689655172,22,0,0.0,18
+P1_pixel_majority_whole,heterogeneous (crop < 50 % of parcel),43,21,8,0.38095238095238093,22,0,0.0,18
+P1_pixel_majority_agricultural,all,80,58,58,1.0,22,2,0.09090909090909091,18
+P1_pixel_majority_agricultural,heterogeneous (crop < 50 % of parcel),43,21,21,1.0,22,2,0.09090909090909091,18
+P2_soft_vote_agricultural>=0.5,all,80,58,56,0.9655172413793104,22,0,0.0,18
+P2_soft_vote_agricultural>=0.5,heterogeneous (crop < 50 % of parcel),43,21,19,0.9047619047619048,22,0,0.0,18
+P3_evidence_status_supported,all,80,58,50,0.8620689655172413,22,0,0.0,18
+P3_evidence_status_supported,heterogeneous (crop < 50 % of parcel),43,21,21,1.0,22,0,0.0,18
+P1_pixel_majority_whole,all,80,59,38,0.6440677966101694,21,0,0.0,19
+P1_pixel_majority_whole,heterogeneous (crop < 50 % of parcel),49,28,7,0.25,21,0,0.0,19
+P1_pixel_majority_agricultural,all,80,59,59,1.0,21,4,0.19047619047619047,19
+P1_pixel_majority_agricultural,heterogeneous (crop < 50 % of parcel),49,28,28,1.0,21,4,0.19047619047619047,19
+P2_soft_vote_agricultural>=0.5,all,80,59,57,0.9661016949152542,21,0,0.0,19
+P2_soft_vote_agricultural>=0.5,heterogeneous (crop < 50 % of parcel),49,28,26,0.9285714285714286,21,0,0.0,19
+P3_evidence_status_supported,all,80,59,55,0.9322033898305084,21,0,0.0,19
+P3_evidence_status_supported,heterogeneous (crop < 50 % of parcel),49,28,27,0.9642857142857143,21,0,0.0,19
+P1_pixel_majority_whole,all,80,57,40,0.7017543859649122,23,0,0.0,20
+P1_pixel_majority_whole,heterogeneous (crop < 50 % of parcel),45,22,5,0.22727272727272727,23,0,0.0,20
+P1_pixel_majority_agricultural,all,80,57,57,1.0,23,4,0.17391304347826086,20
+P1_pixel_majority_agricultural,heterogeneous (crop < 50 % of parcel),45,22,22,1.0,23,4,0.17391304347826086,20
+P2_soft_vote_agricultural>=0.5,all,80,57,56,0.9824561403508771,23,0,0.0,20
+P2_soft_vote_agricultural>=0.5,heterogeneous (crop < 50 % of parcel),45,22,21,0.9545454545454546,23,0,0.0,20
+P3_evidence_status_supported,all,80,57,50,0.8771929824561403,23,0,0.0,20
+P3_evidence_status_supported,heterogeneous (crop < 50 % of parcel),45,22,20,0.9090909090909091,23,0,0.0,20

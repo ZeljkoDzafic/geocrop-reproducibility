@@ -1,0 +1,9 @@
+method,subset,parcels,correct_declarations,supported_of_correct,recall_of_correct,wrong_declarations,supported_of_wrong,wrongly_supported
+P1_pixel_majority_whole,all,80,61,33,0.5409836065573771,19,0,0.0
+P1_pixel_majority_whole,heterogeneous (crop < 50 % of parcel),50,31,3,0.0967741935483871,19,0,0.0
+P1_pixel_majority_agricultural,all,80,61,61,1.0,19,3,0.15789473684210525
+P1_pixel_majority_agricultural,heterogeneous (crop < 50 % of parcel),50,31,31,1.0,19,3,0.15789473684210525
+P2_soft_vote_agricultural>=0.5,all,80,61,56,0.9180327868852459,19,0,0.0
+P2_soft_vote_agricultural>=0.5,heterogeneous (crop < 50 % of parcel),50,31,26,0.8387096774193549,19,0,0.0
+P3_evidence_status_supported,all,80,61,56,0.9180327868852459,19,0,0.0
+P3_evidence_status_supported,heterogeneous (crop < 50 % of parcel),50,31,30,0.967741935483871,19,0,0.0
