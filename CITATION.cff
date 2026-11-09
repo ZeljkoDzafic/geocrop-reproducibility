@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this package, please cite it and the GeoCrop Engine release it uses."
+title: "GeoCrop reproducibility package: sensitivity workflow, synthetic data and aggregated results"
+type: software
+version: 0.1.0
+date-released: 2026-11-09
+license: Apache-2.0
+authors:
+  - family-names: "Džafić"
+    given-names: "Željko"
+    orcid: "https://orcid.org/0009-0004-0839-1920"
+  - family-names: "Adžić"
+    given-names: "Dragutin"
+    orcid: "https://orcid.org/0009-0003-0858-4143"
+references:
+  - type: software
+    title: "GeoCrop Engine v1.0.0rc2"
+    doi: 10.5281/zenodo.24078771
