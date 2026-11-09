@@ -9,3 +9,11 @@ jobs:
         with: {python-version: "3.12"}
       - run: pip install -r requirements.txt
       - run: scripts/run_sensitivity_demo.sh out
+  crop-presence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -r requirements-crop-presence.txt   # engine main until the release that contains crop-presence
+      - run: scripts/run_crop_presence_demo.sh out

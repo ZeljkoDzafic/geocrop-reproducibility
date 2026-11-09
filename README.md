@@ -20,9 +20,26 @@ Project website: https://geocropengine.rs.ba/ · Engine: https://github.com/Zelj
 | `scenes/scenes_2023_imported.csv` | 82 Sentinel-2 and 44 Sentinel-1 scenes imported for the study (public data) |
 | `configs/study_2023_resolved.yaml` | resolved configuration of the 2023 pixel-level run (from its run manifest; reference paths replaced by placeholders) |
 | `aoi/` | experiment AOI (357.6 km²) and operational lowland AOI (719.4 km²) as GeoJSON, with hashes in `HASHES.md` |
+| `synthetic/make_synthetic_declarations.py`, `scripts/run_crop_presence_demo.sh`, `scripts/compare_crop_presence.py` | synthetic declared parcels with known truth, the `crop-presence` run and its scoring |
 | `scripts/declared_overlay.py` | aggregate overlay of a declared-parcel layer with a classification map (the comparison of Section 6.4 of the paper) |
 | `results_aggregate/declared/` | aggregated outputs of that comparison (no geometries) |
 | `results_aggregate/run_provenance_study.csv` | engine commit, working-tree flag, timestamp, config fingerprint and training-set hash of each run |
+
+## Declared crop in heterogeneous parcels (`crop-presence`), synthetic with known truth
+`scripts/run_crop_presence_demo.sh` generates 80 synthetic cadastral-like parcels (forest, grass and a connected crop block;
+about a quarter of the declarations wrong by construction), simulates a classifier that is right for ~85 % of pixels,
+runs `geocrop crop-presence` and scores three methods against the known truth: **A** pixel majority (whole parcel and
+agricultural part), **B** area-weighted soft vote, **C** segment-based evidence with the largest connected supported area.
+It shows that the code separates a heterogeneous parcel from a wrong declaration and what the review status costs. It
+does **not** show real accuracy, the thresholds of the preliminary status are not validated, and without field-verified
+parcels none of the methods can be scored on real data. Approval of a declaration is an administrative decision, not a
+field verification. The command exists only on the engine's main branch until the next release
+(`requirements-crop-presence.txt`).
+
+```
+pip install -r requirements-crop-presence.txt
+scripts/run_crop_presence_demo.sh out
+```
 
 ## What this package does not do
 Without the restricted reference data the package does **not** let you re-obtain the accuracy reported in the paper; it

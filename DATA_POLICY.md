@@ -8,6 +8,8 @@ predictions, out-of-fold tables, geometries). They are personal or administrativ
 - `synthetic/make_synthetic_dataset.py`: a generator of synthetic samples in the engine's `samples.npz` layout. It
   contains no real data. It places three soybean polygons with a maize-like, shorter season in one block to mimic the
   situation studied in the paper; the numbers it produces say nothing about real accuracy.
+- `synthetic/make_synthetic_declarations.py`: synthetic parcels, declarations and a simulated classifier with known truth for
+  the `crop-presence` demo; no real parcel, declaration or applicant data.
 - `results_aggregate/`: aggregated results of the study (overall metrics per feature set and partition, partition
   spread, summary of all variants). No polygon identifiers, no geometries.
 - `scenes/scenes_2023_imported.csv`: the Sentinel-2 and Sentinel-1 scenes imported for the study (public Copernicus
