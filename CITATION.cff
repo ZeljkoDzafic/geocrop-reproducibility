@@ -5,6 +5,7 @@ type: software
 version: 0.1.0
 date-released: 2026-11-09
 license: Apache-2.0
+url: "https://geocropengine.rs.ba/"
 authors:
   - family-names: "Džafić"
     given-names: "Željko"

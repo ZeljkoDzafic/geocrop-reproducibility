@@ -8,6 +8,8 @@ Parcel Delineation and Declaration Verification* (under review; Lijevče polje, 
 > conclusion. The synthetic demo reproduces the *workflow*, not the study's numbers. The real reference polygons and
 > declarations are not distributed ([DATA_POLICY.md](DATA_POLICY.md)).
 
+Project website: https://geocropengine.rs.ba/ · Engine: https://github.com/ZeljkoDzafic/geocrop-engine
+
 ## Contents
 | Path | What |
 |---|---|
