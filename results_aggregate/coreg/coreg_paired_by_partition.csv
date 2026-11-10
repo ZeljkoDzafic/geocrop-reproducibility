@@ -1,4 +1,4 @@
-experiment,partition,block_m,offset_m,raw_OA,corrected_OA,raw_soybean_F1,corrected_soybean_F1,raw_target_macro_F1,corrected_target_macro_F1,diff_OA,diff_soybean_F1,diff_target_macro_F1
+experiment,partition,block_m,offset_m,raw_OA,corrected_OA,raw_soybean_F1,corrected_soybean_F1,raw_macro_F1_maize_soybean_sunflower,corrected_macro_F1_maize_soybean_sunflower,diff_OA,diff_soybean_F1,diff_macro_F1_maize_soybean_sunflower
 E3,block_3000m_shift_0m,3000.0,0.0,0.854679,0.881245,0.775681,0.837304,0.83234,0.877246,0.026566,0.061623,0.044907
 E3,block_3000m_shift_750m,3000.0,750.0,0.861023,0.883228,0.809004,0.850202,0.84642,0.886226,0.022205,0.041198,0.039806
 E3,block_3000m_shift_1500m,3000.0,1500.0,0.865186,0.887986,0.832107,0.871391,0.87043,0.900073,0.022799,0.039284,0.029643

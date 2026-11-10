@@ -17,7 +17,7 @@ nothing about real accuracy.**
 | Randomness | `numpy.random.default_rng(seed)`; seed 11 for the main table, seeds 1-20 for the spread; one simulation per seed |
 
 ## Software versions
-Base experiments: engine commit c612404 and later commits, all contained in v1.0.0rc2; clean re-execution of E0-E8: commit 1f4509036b (on the main branch after v1.0.0rc2); crop-presence demonstration: engine commit 5f73f60fe6a413710b2339fb55b888328dd631d2 (pinned in `requirements-crop-presence.txt`). This package: the commit shown on GitHub for the version you cite.
+Base experiments: engine commit c612404 and later commits; clean re-execution of E0-E8: commit 1f4509036b; crop-presence demonstration: engine commit 5f73f60fe6a413710b2339fb55b888328dd631d2 (added after v1.0.0rc2). All of these are contained in release candidate v1.0.0rc3 (commit e59f0b76abd95cb9205535456954cc3d43c45db2, Zenodo DOI 10.5281/zenodo.24104638), the pin of `requirements.txt` and `requirements-crop-presence.txt`. This package: the commit shown on GitHub for the version you cite.
 
 ## Run
 ```

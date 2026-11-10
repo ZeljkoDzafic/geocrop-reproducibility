@@ -15,5 +15,5 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
-      - run: pip install -r requirements-crop-presence.txt   # engine main until the release that contains crop-presence
+      - run: pip install -r requirements-crop-presence.txt   # release v1.0.0rc3 (contains crop-presence)
       - run: scripts/run_crop_presence_demo.sh out

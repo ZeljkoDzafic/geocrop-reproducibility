@@ -28,13 +28,12 @@ Project website: https://geocropengine.rs.ba/ · Engine: https://github.com/Zelj
 ## Declared crop in heterogeneous parcels (`crop-presence`), synthetic with known truth
 `scripts/run_crop_presence_demo.sh` generates 80 synthetic cadastral-like parcels (forest, grass and a connected crop block;
 about a quarter of the declarations wrong by construction), simulates a classifier that is right for ~85 % of pixels,
-runs `geocrop crop-presence` and scores three methods against the known truth: **A** pixel majority (whole parcel and
-agricultural part), **B** area-weighted soft vote, **C** segment-based evidence with the largest connected supported area.
+runs `geocrop crop-presence` and scores three methods against the known truth: **P1** pixel majority (whole parcel and
+agricultural part), **P2** area-weighted soft vote, **P3** segment-based evidence with the largest connected supported area.
 It shows that the code separates a heterogeneous parcel from a wrong declaration and what the review status costs. It
 does **not** show real accuracy, the thresholds of the preliminary status are not validated, and without field-verified
 parcels none of the methods can be scored on real data. Approval of a declaration is an administrative decision, not a
-field verification. The command exists only on the engine's main branch until the next release
-(`requirements-crop-presence.txt`).
+field verification. The command is part of GeoCrop Engine release candidate v1.0.0rc3 (engine commit e59f0b76, added after v1.0.0rc2; Zenodo DOI 10.5281/zenodo.24104638, all versions 10.5281/zenodo.24078244), pinned in `requirements-crop-presence.txt`.
 
 ```
 pip install -r requirements-crop-presence.txt

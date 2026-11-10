@@ -16,7 +16,7 @@ identical_geometry_pairs,101
 declarations_below_95pct_inside_aoi,2
 declarations_below_95pct_valid_pixels,1
 partly_outside_aoi_flag,3
-declarations_with_no_pixel_centre,116
+declarations_with_no_pixel_centre,25
 declared_area_inside_experiment_aoi_ha,3280.6216127692637
 area_ratio_median,1.0028448213959296
 area_ratio_p5,0.9640214733522575
