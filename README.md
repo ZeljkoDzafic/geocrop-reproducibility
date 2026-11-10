@@ -66,7 +66,7 @@ How they were produced: engine commit `a647946` (branch `release/1.0.0rc3`, cont
 ## What this package does not do
 Without the restricted reference data the package does **not** let you re-obtain the accuracy reported in the paper; it
 reproduces the workflow on synthetic data and documents the study (configuration, AOI, scene inventory, provenance,
-aggregated results). The runs of the study were made with several engine commits (all contained in v1.0.0rc2); the run
+aggregated results). The runs of the study were made with several engine commits (all contained in v1.0.0rc3); the run
 manifests record that the working tree was not clean when they ran, see `results_aggregate/run_provenance_study.csv`.
 
 Protocol, parameters, absolute counts and the spread over 20 seeds of the synthetic crop-presence experiment: [PROTOCOL_crop_presence_synthetic.md](PROTOCOL_crop_presence_synthetic.md). The clean re-execution of the main experiments (identical results from commit `1f4509036b`) is in `results_aggregate/clean_reexecution_E0_E8.csv`; the configuration of the main run is `configs/study_2023_main_run_resolved.yaml`.
@@ -74,7 +74,7 @@ Protocol, parameters, absolute counts and the spread over 20 seeds of the synthe
 ## Run the demo
 ```
 python -m venv .venv && . .venv/bin/activate
-pip install -r requirements.txt            # GeoCrop Engine v1.0.0rc2 + tabulate
+pip install -r requirements.txt            # GeoCrop Engine v1.0.0rc3 + tabulate
 scripts/run_sensitivity_demo.sh out        # ~10 minutes on a laptop; writes out/pheno/PHENO_ABC.md
 ```
 The demo uses the engine commands `geocrop phenology-features` and `geocrop cv-stability --feature-sets/--feature-set`
@@ -86,8 +86,10 @@ Provide a `samples.npz` from `geocrop samples` (with `ts_<index>_d<doy>` columns
 follow `scripts/run_sensitivity_demo.sh`.
 
 ## How to cite
-Use `CITATION.cff` (archived with a Zenodo DOI once released) and cite the engine release as well:
-GeoCrop Engine v1.0.0rc2, https://doi.org/10.5281/zenodo.24078771.
+Use `CITATION.cff` and cite the engine release as well:
+GeoCrop Engine v1.0.0rc3, https://doi.org/10.5281/zenodo.24104638.
+
+The sensitivity demonstration may have been run with an earlier release candidate (see `PROTOCOL_crop_presence_synthetic.md` for the exact engine commit of each experiment); the release recommended for citation is v1.0.0rc3.
 
 ## Licence
 Code and synthetic data: Apache-2.0 (see `LICENSE`). Aggregated result tables: CC-BY-4.0.
