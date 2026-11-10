@@ -1,7 +1,6 @@
 # GeoCrop reproducibility package
 
-Companion to the paper *GeoCrop Engine: An Open and Reproducible Framework for Sentinel-Based Crop Classification,
-Parcel Delineation and Declaration Verification* (under review; Lijevče polje, 2023). It lets you re-run the
+Companion to the paper *GeoCrop Engine: An Open and Reproducible Framework for Sentinel-Based Crop Classification and Parcel-Level Review Support* (under review; Lijevče polje, 2023). It lets you re-run the
 **sensitivity workflow** of the paper on synthetic data, and gives the aggregated study results and the scene inventory.
 
 > Results here are internal cross-validation outputs, a recommendation for human review and not a definitive
@@ -18,6 +17,8 @@ Project website: https://geocropengine.rs.ba/ · Engine: https://github.com/Zelj
 | `scripts/compare_pheno.py` | one table for the A/B/C experiment from `geocrop cv-stability` outputs |
 | `results_aggregate/` | aggregated study results (overall metrics, partition spread, all-variants summary) |
 | `scenes/scenes_2023_imported.csv` | 82 Sentinel-2 and 44 Sentinel-1 scenes imported for the study (public data) |
+| `configs/study_clean.yaml`, `configs/study_s1coreg.yaml` | configurations of the clean re-execution (uncorrected Sentinel-1) and of the co-registration sensitivity run, reference paths replaced by placeholders |
+| `results_aggregate/coreg/` | aggregated Sentinel-1 co-registration results: offsets by geometry, before/after E0-E8, paired results over 12 partitions, map agreement and class-area changes (no geometries, no polygon ids) |
 | `configs/study_2023_resolved.yaml` | resolved configuration of the 2023 pixel-level run (from its run manifest; reference paths replaced by placeholders) |
 | `aoi/` | experiment AOI (357.6 km²) and operational lowland AOI (719.4 km²) as GeoJSON, with hashes in `HASHES.md` |
 | `synthetic/make_synthetic_declarations.py`, `scripts/run_crop_presence_demo.sh`, `scripts/compare_crop_presence.py` | synthetic declared parcels with known truth, the `crop-presence` run and its scoring |
