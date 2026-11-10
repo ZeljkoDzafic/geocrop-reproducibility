@@ -22,8 +22,7 @@ Project website: https://geocropengine.rs.ba/ · Engine: https://github.com/Zelj
 | `configs/study_2023_resolved.yaml` | resolved configuration of the 2023 pixel-level run (from its run manifest; reference paths replaced by placeholders) |
 | `aoi/` | experiment AOI (357.6 km²) and operational lowland AOI (719.4 km²) as GeoJSON, with hashes in `HASHES.md` |
 | `synthetic/make_synthetic_declarations.py`, `scripts/run_crop_presence_demo.sh`, `scripts/compare_crop_presence.py` | synthetic declared parcels with known truth, the `crop-presence` run and its scoring |
-| `scripts/declared_overlay.py` | aggregate overlay of a declared-parcel layer with a classification map (the comparison of Section 6.4 of the paper) |
-| `results_aggregate/declared/` | aggregated outputs of that comparison (no geometries) |
+| `results_aggregate/declarations/` | aggregated results of `geocrop crop-presence` on the 4,998 declarations of 2023 (no identifiers, cadastral keys or geometries; Section 6.4 and Supplementary S11 of the paper) |
 | `results_aggregate/run_provenance_study.csv` | engine commit, working-tree flag, timestamp, config fingerprint and training-set hash of each run |
 
 ## Declared crop in heterogeneous parcels (`crop-presence`), synthetic with known truth
@@ -60,6 +59,10 @@ the correction shifts linear power by (-dy, -dx) with bilinear interpolation and
 scripts that produced the tables are not part of the public package; the commands in the paper's supplement and the engine's co-registration function
 (`geocrop.s1_stac.estimate_offsets`, `geocrop.acceptance.coregistration`) reproduce the procedure on your own data. The automatic correction is an option
 with quality control and should not be applied unconditionally to a new data set.
+
+## Crop presence on the real declarations (aggregated results only)
+`results_aggregate/declarations/` holds the aggregated outputs behind Section 6.4 and Supplementary Section S11: methods by declared crop, by parcel size and by agricultural share, method agreement, E0 versus E8, OBIA versus pseudo-segments, threshold sensitivity and the data checks. The declaration layer (4,998 declarations with cadastral keys) is protected and is not distributed, so these tables cannot be re-created from this package; they are consistency numbers, not accuracy (there is no field verification of the declared crops).
+How they were produced: engine commit `a647946` (branch `release/1.0.0rc3`, containing `crop-presence` from commit `5f73f60`), `geocrop crop-presence --probabilities <E8 or E0 probabilities> --parcels <neutral parcel file> --declared-area-field declared_area_ha --out <dir>` with the default, unvalidated thresholds (support probability 0.5, minimum segment 0.03 ha, minimum connected support 0.05 ha, minimum supported share 0.5, low score 0.1, minimum confidence 0.6, area tolerance 0.5, minimum agricultural area 0.03 ha; agricultural part: maize, soybean, sunflower, vegetables, winter crops); OBIA segments from `geocrop segment-obia --bands P3_B04 P3_B08 P3_B11 P3_NDVI --segments-per-km2 100 --compactness 10` with the AOI mask (35,449 segments, parameters not tuned).
 
 ## What this package does not do
 Without the restricted reference data the package does **not** let you re-obtain the accuracy reported in the paper; it
