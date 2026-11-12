@@ -1,0 +1,13 @@
+group,dominant_class,n,share
+all,grass,853,0.6011275546159267
+all,forest,336,0.23678646934460887
+all,built_up,220,0.15503875968992248
+all,water,10,0.007047216349541931
+geometry_suitable,grass,171,0.6867469879518072
+geometry_suitable,forest,61,0.24497991967871485
+geometry_suitable,built_up,16,0.0642570281124498
+geometry_suitable,water,1,0.004016064257028112
+area>=0.5,grass,198,0.72
+area>=0.5,forest,55,0.2
+area>=0.5,built_up,21,0.07636363636363637
+area>=0.5,water,1,0.0036363636363636364

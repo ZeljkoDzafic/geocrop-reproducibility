@@ -1,0 +1,13 @@
+subset,method_a,method_b,n_declarations,n_both_evaluated,both_supported,only_a,only_b,neither,agreement
+all_declarations,p1_agricultural,p2_soft_vote,4998,3767,2481,306,0,2211,0.9387755102040817
+all_declarations,p1_agricultural,p3_status,4998,4973,1917,870,0,2211,0.8259303721488596
+all_declarations,p2_soft_vote,p3_status,4998,3767,1908,573,9,2508,0.8835534213685474
+area_ge_0.2_ha,p1_agricultural,p2_soft_vote,3596,3095,2047,220,0,1329,0.9388209121245829
+area_ge_0.2_ha,p1_agricultural,p3_status,3596,3596,1693,574,0,1329,0.8403781979977754
+area_ge_0.2_ha,p2_soft_vote,p3_status,3596,3095,1684,363,9,1540,0.896551724137931
+area_ge_0.5_ha,p1_agricultural,p2_soft_vote,2214,2028,1359,136,0,719,0.938572719060524
+area_ge_0.5_ha,p1_agricultural,p3_status,2214,2214,1141,354,0,719,0.8401084010840109
+area_ge_0.5_ha,p2_soft_vote,p3_status,2214,2028,1134,225,7,848,0.8952122854561879
+geometry_suitable,p1_agricultural,p2_soft_vote,1805,1624,1070,111,0,624,0.9385041551246538
+geometry_suitable,p1_agricultural,p3_status,1805,1805,886,295,0,624,0.8365650969529086
+geometry_suitable,p2_soft_vote,p3_status,1805,1624,880,190,6,729,0.8914127423822714
