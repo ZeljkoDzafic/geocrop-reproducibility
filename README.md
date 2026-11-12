@@ -23,6 +23,7 @@ Project website: https://geocropengine.rs.ba/ · Engine: https://github.com/Zelj
 | `aoi/` | experiment AOI (357.6 km²) and operational lowland AOI (719.4 km²) as GeoJSON, with hashes in `HASHES.md` |
 | `synthetic/make_synthetic_declarations.py`, `scripts/run_crop_presence_demo.sh`, `scripts/compare_crop_presence.py` | synthetic declared parcels with known truth, the `crop-presence` run and its scoring |
 | `results_aggregate/declarations/` | aggregated results of `geocrop crop-presence` on the 4,998 declarations of 2023 (no identifiers, cadastral keys or geometries; Section 6.4 and Supplementary S11 of the paper) |
+| `results_aggregate/round2/` | aggregates behind Tables 14–16 of the paper (geometric suitability and its threshold sensitivity, P1/P2/P3 on subsets, presence criterion, mismatch categories, segment density), with the commands and input hashes; no identifiers or geometries |
 | `results_aggregate/run_provenance_study.csv` | engine commit, working-tree flag, timestamp, config fingerprint and training-set hash of each run |
 
 ## Declared crop in heterogeneous parcels (`crop-presence`), synthetic with known truth

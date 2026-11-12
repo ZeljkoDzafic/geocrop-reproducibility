@@ -1,0 +1,5 @@
+subset,n,area_ha,P3_supported_not_P1agri,P3_supported,P1agri,present,partial,absent,indeterminate,present_not_P1agri,present_not_P3,P1agri_not_present,lowagri_n,mm_too_few_pixels,mm_no_valid_observations,mm_other_crop_present,mm_declared_crop_partial,mm_area_disagreement,mm_model_disagreement,mm_non_agricultural_dominant,mm_none,mm_declared_crop_not_modelled,flag_too_few_pixels,flag_no_valid_observations,flag_other_crop_present,flag_declared_crop_partial,flag_area_disagreement,flag_model_disagreement
+all,4998,3280.7,0,1917,2787,1984,656,1760,598,28,178,831,1419,598,0,727,656,123,128,1033,1733,0,598,0,903,656,123,714
+area>=0.2,3596,3146.0,0,1693,2267,1777,603,1216,0,27,164,517,672,0,0,626,603,112,119,590,1546,0,0,0,801,603,112,534
+area>=0.5,2214,2667.6,0,1141,1495,1213,416,585,0,24,123,306,275,0,0,365,416,81,82,220,1050,0,0,0,509,416,81,321
+geometry_suitable,1805,2331.8,0,886,1181,949,351,505,0,24,104,256,249,0,0,295,351,66,65,210,818,0,0,0,419,351,66,270

@@ -17,6 +17,7 @@ predictions, out-of-fold tables, geometries). They are personal or administrativ
 - `configs/study_2023_resolved.yaml`, `aoi/`, `HASHES.md`: the resolved configuration of the 2023 run, the AOIs (boundaries only)
   and their hashes; reference-data paths in the configuration are placeholders.
 - `results_aggregate/coreg/`: aggregated results of the Sentinel-1 / Sentinel-2 co-registration check (offsets by acquisition geometry, before and after the correction, paired results by spatial partition, class areas and map agreement). The numbers of the paper are the original uncorrected experiment; the corrected run is a later sensitivity analysis (see README).
+- `results_aggregate/round2/`: aggregated results of the geometric suitability assessment, the presence criterion, the mismatch categories and the segment-density analysis of the 4,998 declarations (counts and shares only; no identifiers, cadastral keys or geometries).
 - `results_aggregate/declarations/`: aggregated results of the crop-presence analysis of the 4,998 declarations of 2023 (counts,
   shares by crop, size class and agricultural share); no identifiers, cadastral keys or geometries. The layer itself, which
   contains cadastral identifiers, is not distributed; it can be requested subject to the agreement of the data owners.
