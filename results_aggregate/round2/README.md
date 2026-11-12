@@ -19,8 +19,10 @@ Column definitions follow the engine documentation (`geocrop crop-presence`, `ge
 
 ## How the numbers were produced
 
-Engine: release v1.0.0rc4 (commit `bb5f1bd`), which contains the commit of the suitability, presence and window modules
-(`4ac1265`). The run manifests of the earlier analyses report `engine_version` 1.0.0rc3 because the installed package
+Engine: the analyses were run with the code of commit `bb5f1bd` (release v1.0.0rc4), which contains the commit of the
+suitability, presence and window modules (`4ac1265`). The archived release that contains all of it is v1.0.0rc5 (commit
+`7ade928`, Zenodo DOI 10.5281/zenodo.24156741; all versions 10.5281/zenodo.24078244). Release v1.0.0rc5 adds warnings to
+the segment-density sweep and changes the wording of the suitability output; no result changes. The run manifests of the earlier analyses report `engine_version` 1.0.0rc3 because the installed package
 metadata of the working environment was out of date, not because rc3 code was used.
 
 Inputs (SHA-256):
@@ -55,5 +57,4 @@ The densities 100 to 500 used tiles of 1,024 pixels and a minimum segment size o
 used tiles of 512 pixels and a minimum of one pixel, because 1,000 segments per km² in tiles of 1,024 pixels exhausted
 memory and a minimum of nine pixels left 20.5 % of the parcel area without segments. The density of 1,000 is therefore
 not a comparison in which only the density changed, and the small effect on the P3 status is observed across the tested
-segmentation configurations. A later change of the engine (not part of the cited release) makes `geocrop segmentation-sweep` warn about both
-situations.
+segmentation configurations. Since release v1.0.0rc5 `geocrop segmentation-sweep` warns about both situations.
